@@ -115,10 +115,12 @@ def predictor(
   
   
   try:
-    df = pd.DataFrame(data["data"])
-    json_list = json.loads(json.dumps(list(df.T.to_dict().values())))
-    data = np.array(json_list)
-    prediction = service.predict(data)
+    # Ensure the data is correctly structured with 4995 features per sample
+    input_data = np.array(data["data"])  # Shape should be (100, 4995)
+    print(f"Input data to model: {input_data.shape}")
+        
+    # Send the data to the prediction service
+    prediction = service.predict(input_data)
     return prediction
   
   except Exception as e:
