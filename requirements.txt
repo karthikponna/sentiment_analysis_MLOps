@@ -17,3 +17,4 @@ SQLAlchemy
 psycopg2
 beautifulsoup4
 xgboost
+streamlit==1.40.0
