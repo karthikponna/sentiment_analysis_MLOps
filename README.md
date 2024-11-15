@@ -12,4 +12,4 @@ This repository presents an end-to-end Sentiment Analysis project designed with 
 - A **Continuous Deployment Pipeline** that trains and deploys the model automatically.
 - An **Inference Pipeline** that enables real-time sentiment predictions through a user-friendly Streamlit interface.
 
-Explore how MLOps transforms sentiment analysis into a fully automated and production-ready solution!
+***Explore how MLOps transforms sentiment analysis into a fully automated and production-ready solution!***
