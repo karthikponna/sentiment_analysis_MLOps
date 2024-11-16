@@ -6,9 +6,11 @@
 - [Tech Stack](#-Tech-Stack)
 - [Local Setup](#-Local-Setup-and-Installation)
 - [Zenml Integration](#-Zenml-Integration)
+- [Running the Project](#-Running-the-Project)
 
 ## Introduction
 Transforming sentiment analysis into a fully automated, production-ready pipeline with cutting-edge **MLOps tools**, this project automates sentiment analysis on customer reviews at scale, ensuring accurate model deployment and real-time predictions. It integrates powerful tools like **ZenML** for pipeline management, **MLflow** for model deployment and experiment tracking, **PostgreSQL** for data ingestion, and **Streamlit** for an interactive interface, ensuring efficiency and scalability.
+
 **It features:**
 
 - A **Training Pipeline** that ingests data, preprocesses, vectorizes it, trains the model, and evaluates the results.
@@ -27,14 +29,14 @@ Our standard training pipeline consists of several steps:
 
 ![Traning Pipeline](assets/training_pipeline.png)
 
-### - **Continuous Deployment Pipeline**
+### 2. **Continuous Deployment Pipeline**
 This pipeline is here to make your life easier! 🔄 It automatically handles the deployment of your best-performing model, ensuring the entire process — from training to serving — is smooth and efficient. By continuously checking model performance, it (re)deploys only the
 top-performing versions, keeping your production environment optimized, scalable, and ready to handle real-world data seamlessly.
 
 ![Continuous Deployment Pipeline](assets/continuous_deployment_pipeline.png)
 
 
-### - **Inference Pipeline**
+### 3. **Inference Pipeline**
 The inference pipeline is all about making predictions effortless! 🧠 It loads the deployed model service from **MLflow** and processes new input data to generate predictions seamlessly. Designed for real-time predictions, this pipeline ensures your production system is always ready to deliver accurate results quickly and efficiently.
 
 ![Inference Pipeline](assets/Inference_pipeline.png)
@@ -103,3 +105,30 @@ zenml model-deployer register mlflow --flavor=mlflow
 zenml stack register local-mlflow-stack -a default -o default -d mlflow -e mlflow_tracker --set
 ```
 
+## Running the Project
+
+Follow these steps to run different components of the project:
+
+1. **Training Pipeline**:
+   
+   ```bash
+    python run_pipeline.py
+    ```
+
+2. **Continuous Integration Pipeline**:
+
+   ```bash
+    python run_deployment.py --config deploy
+    ```
+
+3. **Inference Pipeline**:
+
+   ```bash
+    python run_deployment.py --config predict
+    ```
+
+4. **Streamlit**:
+
+   ```bash
+    streamlit run streamlit_app.py
+    ``` 
