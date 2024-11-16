@@ -1,13 +1,17 @@
 # Sentiment Analysis MLOps Project 🚀
 
+--- 
+
 ## Table of Contents
 - [Introduction](#-Introduction)
 - [Deployment Pipelines](#-Deployment-Pipelines)
 - [Tech Stack](#-Tech-Stack)
-- [Local Setup and Installation](#-Local-Setup-and-Installation)
+- [Local Setup](#-Local-Setup-and-Installation)
+- [Zenml Integration](#-Zenml-Integration)
 
 ## Introduction
-This repository presents an end-to-end Sentiment Analysis project designed with cutting-edge **MLOps principles**. By integrating powerful tools like **ZenML** for seamless pipeline management, **MLflow** for streamlined model deployment and experiment tracking, **PostgreSQL** for robust data ingestion, and **Streamlit** for an interactive user interface, this project ensures efficiency and scalability.
+Transforming sentiment analysis into a fully automated, production-ready pipeline with cutting-edge **MLOps tools**. By integrating powerful tools like **ZenML** for seamless pipeline management, **MLflow** for streamlined model deployment and experiment tracking, **PostgreSQL** for robust data ingestion, and **Streamlit** for an interactive user interface, this project ensures efficiency and scalability.
+
 **It features:**
 
 - A **Continuous Deployment Pipeline** that trains and deploys the model automatically.
@@ -16,14 +20,16 @@ This repository presents an end-to-end Sentiment Analysis project designed with 
 ***Explore how MLOps transforms sentiment analysis into a fully automated and production-ready solution!***
 
 ## Deployment Pipelines
-### **Continuous Deployment Pipeline**
+### - **Continuous Deployment Pipeline**
 This pipeline is here to make your life easier! 🔄 It automatically handles the deployment of your best-performing model, ensuring the entire process — from training to serving — is smooth and efficient. By continuously checking model performance, it deploys only the
 top-performing versions, keeping your production environment optimized, scalable, and ready to handle real-world data seamlessly.
+
 ![Continuous Deployment Pipeline](assets/continuous_deployment_pipeline.png)
 
 
-### **Inference Pipeline**
-The inference pipeline is all about making predictions effortless! 🧠 It loads the deployed model service and processes new input data to generate predictions seamlessly. Designed for real-time predictions, this pipeline ensures your production system is always ready to deliver accurate results quickly and efficiently.
+### - **Inference Pipeline**
+The inference pipeline is all about making predictions effortless! 🧠 It loads the deployed model service from **MLflow** and processes new input data to generate predictions seamlessly. Designed for real-time predictions, this pipeline ensures your production system is always ready to deliver accurate results quickly and efficiently.
+
 ![Inference Pipeline](assets/Inference_pipeline.png)
 
 
@@ -34,10 +40,14 @@ The inference pipeline is all about making predictions effortless! 🧠 It loads
 - **PostgreSQL**: Ensures robust and efficient data ingestion and management.
 - **Docker**: Provides a consistent and scalable environment for pipeline execution.
 
+### PostgreSQL 
 ![customer_reviews-pgadmin](assets/customer_reviews_table_pg.png)
 
+### Using MLFlow for Model Deployer & Experiment Tracker with ZenML
 ![Zenml, MLFlow-Model Deployer-Experiment_tracker](assets/zenml-mlflow.png)
 
+
+### Streamlit
 ![Streamlit app](assets/streamlit_app.png)
 
 ## Local Setup
@@ -70,7 +80,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## ZenML Installation
+## Zenml Integration
 1. Install ZenML - https://docs.zenml.io/getting-started/installation 
 
 2. Install some integrations using ZenML:
