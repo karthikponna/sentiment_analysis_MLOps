@@ -1,7 +1,5 @@
 # Sentiment Analysis MLOps Project 🚀
 
---- 
-
 ## Table of Contents
 - [Introduction](#-Introduction)
 - [Deployment Pipelines](#-Deployment-Pipelines)
@@ -10,18 +8,27 @@
 - [Zenml Integration](#-Zenml-Integration)
 
 ## Introduction
-Transforming sentiment analysis into a fully automated, production-ready pipeline with cutting-edge **MLOps tools**. By integrating powerful tools like **ZenML** for seamless pipeline management, **MLflow** for streamlined model deployment and experiment tracking, **PostgreSQL** for robust data ingestion, and **Streamlit** for an interactive user interface, this project ensures efficiency and scalability.
-
+Transforming sentiment analysis into a fully automated, production-ready pipeline with cutting-edge **MLOps tools**, this project automates sentiment analysis on customer reviews at scale, ensuring accurate model deployment and real-time predictions. It integrates powerful tools like **ZenML** for pipeline management, **MLflow** for model deployment and experiment tracking, **PostgreSQL** for data ingestion, and **Streamlit** for an interactive interface, ensuring efficiency and scalability.
 **It features:**
 
-- A **Continuous Deployment Pipeline** that trains and deploys the model automatically.
+- A **Training Pipeline** that ingests data, preprocesses, vectorizes it, trains the model, and evaluates the results.
+- A **Continuous Deployment Pipeline** that trains and (re)deploys the model automatically.
 - An **Inference Pipeline** that enables real-time sentiment predictions through a user-friendly Streamlit interface.
 
-***Explore how MLOps transforms sentiment analysis into a fully automated and production-ready solution!***
-
 ## Deployment Pipelines
+### 1. **Training Pipeline**
+Our standard training pipeline consists of several steps:
+
+- **ingest_data**: This step will ingest the data and create a DataFrame.
+- **data_preprocessing**: The data is cleaned and transformed to make it suitable for training.
+- **vectorization**: The text data is converted into numerical format using techniques like TF-IDF making it ready for model training.
+- **train_model**: This step will train the model and save the model using [MLflow autologging](https://www.mlflow.org/docs/latest/tracking.html).
+- **evaluation**: This step will evaluate the model and save the metrics — using **MLflow autologging** — into the artifact store.
+
+![Traning Pipeline](assets/training_pipeline.png)
+
 ### - **Continuous Deployment Pipeline**
-This pipeline is here to make your life easier! 🔄 It automatically handles the deployment of your best-performing model, ensuring the entire process — from training to serving — is smooth and efficient. By continuously checking model performance, it deploys only the
+This pipeline is here to make your life easier! 🔄 It automatically handles the deployment of your best-performing model, ensuring the entire process — from training to serving — is smooth and efficient. By continuously checking model performance, it (re)deploys only the
 top-performing versions, keeping your production environment optimized, scalable, and ready to handle real-world data seamlessly.
 
 ![Continuous Deployment Pipeline](assets/continuous_deployment_pipeline.png)
@@ -40,7 +47,7 @@ The inference pipeline is all about making predictions effortless! 🧠 It loads
 - **PostgreSQL**: Ensures robust and efficient data ingestion and management.
 - **Docker**: Provides a consistent and scalable environment for pipeline execution.
 
-### PostgreSQL 
+### Table Structure in PostgreSQL 
 ![customer_reviews-pgadmin](assets/customer_reviews_table_pg.png)
 
 ### Using MLFlow for Model Deployer & Experiment Tracker with ZenML
