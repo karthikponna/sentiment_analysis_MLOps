@@ -1,12 +1,12 @@
 # Sentiment Analysis MLOps Project 🚀
 
 ## Table of Contents 📑
-- [Introduction](#-Introduction)
-- [Deployment Pipelines](#-Deployment-Pipelines)
-- [Tech Stack](#-Tech-Stack)
-- [Local Setup](#-Local-Setup-and-Installation)
-- [Zenml Integration](#-Zenml-Integration)
-- [Running the Project](#-Running-the-Project)
+- [Introduction](#-Introduction) 📢
+- [Deployment Pipelines](#-Deployment-Pipelines) ⚙
+- [Tech Stack](#-Tech-Stack) 🛠️
+- [Local Setup](#-Local-Setup-and-Installation) 👨🏼‍💻
+- [Zenml Integration](#-Zenml-Integration) 💥
+- [Running the Project](#-Running-the-Project) 🏃‍➡️
 
 ## Introduction 📢
 This project automates sentiment analysis to classify customer reviews as **positive** or **negative**, helping businesses understand feedback effectively while ensuring accurate model deployment and real-time predictions through cutting-edge **MLOps tools**. It integrates powerful tools like **ZenML** for pipeline management, **MLflow** for model deployment and experiment tracking, **PostgreSQL** for data ingestion, and **Streamlit** for an interactive interface, ensuring efficiency and scalability.
@@ -17,7 +17,7 @@ This project automates sentiment analysis to classify customer reviews as **posi
 - A **Continuous Deployment Pipeline** that trains and (re)deploys the model automatically.
 - An **Inference Pipeline** that enables real-time sentiment predictions through a user-friendly Streamlit interface.
 
-## Deployment Pipelines
+## Deployment Pipelines ⚙
 ### 1. **Training Pipeline** 🚂
 Our standard training pipeline consists of several steps:
 
