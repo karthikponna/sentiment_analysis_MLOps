@@ -1,15 +1,9 @@
 # Sentiment Analysis MLOps Project 🚀
 
-## Table of Contents 📑
-- [Introduction](#-Introduction) 📢
-- [Deployment Pipelines](#-Deployment-Pipelines) ⚙
-- [Tech Stack](#-Tech-Stack) 🛠️
-- [Local Setup](#-Local-Setup-and-Installation) 👨🏼‍💻
-- [Zenml Integration](#-Zenml-Integration) 💥
-- [Running the Project](#-Running-the-Project) 🏃‍➡️
+![Project Architecture](assets/project_architecture.gif)
 
-## Introduction 📢
-This project automates sentiment analysis to classify customer reviews as **positive** or **negative**, helping businesses understand feedback effectively while ensuring accurate model deployment and real-time predictions through cutting-edge **MLOps tools**. It integrates powerful tools like **ZenML** for pipeline management, **MLflow** for model deployment and experiment tracking, **PostgreSQL** for data ingestion, and **Streamlit** for an interactive interface, ensuring efficiency and scalability.
+## Project Overview 📝
+This project automates sentiment analysis to classify customer reviews as **Positive** or **Negative**, helping businesses understand feedback effectively while ensuring accurate model deployment and real-time predictions through cutting-edge **MLOps tools**. It integrates powerful tools like **ZenML** for pipeline management, **MLflow** for model deployment and experiment tracking, **PostgreSQL** for data ingestion, and **Streamlit** for an interactive interface, ensuring efficiency and scalability.
 
 **It features:**
 
@@ -49,7 +43,7 @@ The inference pipeline is all about making predictions effortless! It loads the 
 ![Inference Pipeline](assets/Inference_pipeline.png)
 
 
-## Teck Stack 🛠️
+## Tech Stack 🛠️
 - **PostgreSQL**: Ensures robust and efficient data ingestion and management.
 - **ZenML**: Manages MLOps pipelines for seamless integration and automation.
 - **MLflow**: Handles experiment tracking and deploys the trained models effortlessly.
