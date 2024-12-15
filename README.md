@@ -3,6 +3,9 @@
 ![Project Architecture](assets/project_architecture.gif)
 
 ## Project Overview 📝
+
+[Video Explaination of the project](https://youtu.be/fFIo7zyi8V0?si=69s5qu5fcI3CE7X4)
+
 This project automates sentiment analysis to classify customer reviews as **Positive** or **Negative**, helping businesses understand feedback effectively while ensuring accurate model deployment and real-time predictions through cutting-edge **MLOps tools**. It integrates powerful tools like **ZenML** for pipeline management, **MLflow** for model deployment and experiment tracking, **PostgreSQL** for data ingestion, and **Streamlit** for an interactive interface, ensuring efficiency and scalability.
 
 **It features:**
